@@ -1,0 +1,35 @@
+<section>
+    <div class="login-box" >
+        <div class="login-value">
+            <form >
+                <h2>MovieNeX</h2>
+                <div class="input-box">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    <input 
+                    type="email"
+                    name="email"
+                    id="email"
+                   [(ngModel)] = "email"
+                     >
+                    <label for="">Email</label>
+                </div>
+                <div class="input-box">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <input 
+                    type="password"
+                    name="password"
+                    id="password"
+                    [(ngModel)] = "password"
+                    >
+                    <label for="">Password</label>
+                </div>
+                <div class="forgetpw">
+                    <label for=""><input type="checkbox">Remember Me<a href="#">Forget Password</a></label>
+                    
+                </div>
+                <button class="login-btn" (click)="login()" >Login</button>
+            </form>
+        </div>
+    </div>
+    </section>
+    

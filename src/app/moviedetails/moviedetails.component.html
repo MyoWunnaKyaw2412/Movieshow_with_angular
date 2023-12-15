@@ -1,0 +1,59 @@
+<div class="mvdt contain mt-5">
+  <div class="backgroungpg">
+    <div class="row">
+      <div class="pstph  col-lg-4 p-5">
+        <img
+          src="http://image.tmdb.org/t/p/original/{{
+            moviedetailres.poster_path
+          }}"
+          alt=""
+        />
+      </div>
+      <div class="textand_utube col-lg-8 p-6">
+        <h1 class="mt-4 mb-4">{{ moviedetailres.original_title }}</h1>
+        <p class="tagline">{{ moviedetailres.tagline }}</p>
+        <p>{{ moviedetailres.overview }}</p>
+        <iframe
+          width="560"
+          height="315"
+          [src]="trailer|safe:'resourceUrl' "
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+  <br>
+    <h1>Cast</h1>
+    <div class="p-4">
+      <div class="row">
+        <div class="col-lg-3" *ngFor="let moviecredit of moviecredits">
+          <div class="  row caster">
+            <div class="castimg col-lg-4">
+              <ng-template [ngIf]="!moviecredit.profile_path">
+                <img  class="prof" src="assets/images/default_photo.jpg" alt="">
+                <!-- <i class="fa fa-male" aria-hidden="true"></i> -->
+              </ng-template>
+              <img
+                class="pf"
+                src="http://image.tmdb.org/t/p/original/{{
+                  moviecredit.profile_path
+                }}"
+                alt=""
+              />
+            </div>
+            <div class="castcontant col-lg-8">
+              <h2>{{ moviecredit.name }}</h2>
+              <p>{{ moviecredit.character }}</p>
+              <p class="char">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                {{ moviecredit.popularity }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

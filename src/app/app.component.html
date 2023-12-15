@@ -1,0 +1,35 @@
+<!------nav bar------>
+
+<nav class="navbar navbar-expand-lg fixed-top"[ngStyle] ="navbg">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="">MOVIESHOW</a>
+      <div class="container-fluid">
+        <form class="p-1" [formGroup]="searchMovies" (ngSubmit)="submitForm()" >   
+          <div class=" search-box  ">
+            <i class="fa fa-search" aria-hidden="true"></i><input routerLink="/search" type="email" class="form-control" formControlName="MovieName"  placeholder="Search Movies Here.......">
+          </div>
+        </form>
+    </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/search">Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="logout()">SignIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!------nav bar------>
+  
+
+
+<router-outlet></router-outlet>

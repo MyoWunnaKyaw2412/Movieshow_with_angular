@@ -1,0 +1,112 @@
+.container-fluid{
+    background-color: #000000;
+}
+
+.carousel-inner{
+    height: 700px;
+
+}
+.carousel-inner .carousel-item img{
+
+    height: 700px;
+    object-fit: cover;
+}
+.carousel-caption h2{
+    color: #FF5F00;
+    font-weight: bold;
+}
+
+.carousel-caption p{
+    color: #fff;
+}
+h5{
+    color : #FF5F00;
+    font-size: 50px;
+}
+
+.rowposter{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+.rowimg{
+    max-height: 300px;
+    object-fit: contain;
+    width: 100%;
+    box-sizing: content-box;
+    transition: transform 450ms;
+    margin-right: 9px ;
+}
+.rowimg:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.largeposter{
+    border-radius: 2%;
+    max-height: 350px;
+}
+.rowposter::-webkit-scrollbar{
+    display: none;
+}
+
+/* <--------------------------------------------> */
+
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #f56619;
+    margin-right: 15px;
+    font-size: 25px;
+
+}
+.social-icon a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icon a:hover{
+    color: #f56619;
+    transform: translateY(-5px); 
+}
+.btn.btn2{
+    background-color: #f56619;
+    display: inline-block;
+    text-decoration: white;
+}
+.contact-right form{
+    width: 100%;
+}
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 13px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 10px 60px ;
+    font-size: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+@media only screen and (max-width:600px){
+.contact-left, .contact-right{
+    flex-basis: 100%;
+}
+}

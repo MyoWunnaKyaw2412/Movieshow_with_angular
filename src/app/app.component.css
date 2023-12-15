@@ -1,0 +1,25 @@
+.navbar .navbar-brand{
+    color: #FF5F00;
+    font-weight: bold ;
+    font-size: 20px;
+    margin-top: 0;
+}
+.navbar-nav .nav-item .nav-link
+{
+    margin-right: 20px;
+    color: #FF5F00;
+}
+.search-box{
+    position: relative;
+    width: 50%;
+}
+.search-box .fa{
+    position: absolute;
+    right: 20px;
+    font-size: 1.5em;
+    top: 7px;
+    color: #FF5F00;
+}
+nav{
+    color: #00000000;
+}
